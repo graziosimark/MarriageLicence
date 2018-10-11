@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.core" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.core" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfWhitbyEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WhitbyEmployee" nillable="true" type="tns:WhitbyEmployee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWhitbyEmployee" nillable="true" type="tns:ArrayOfWhitbyEmployee" />
+  <xs:complexType name="WhitbyEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssociateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BusinessUnitCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BusinessUnitDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommunicationsAdvisor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommunicationsAdvisorEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Department" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Division" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeId" type="xs:int" />
+      <xs:element minOccurs="0" name="EmployeeLabel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HRAdvisor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HRAdvisorEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JobFunction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JobTitleCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JobTitleDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobilePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhotoUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PositionID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PositionPKID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PositionStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreferredName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportsToAssociateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportsToEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportsToFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportsToLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Section" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StaffEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subsection" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TISAdvisor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TISAdvisorEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkPhone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WhitbyEmployee" nillable="true" type="tns:WhitbyEmployee" />
+</xs:schema>

@@ -1,4 +1,9 @@
-﻿body {
+﻿.headBanner {
+    color: #ffffff;
+    font-size: x-large;
+}
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }

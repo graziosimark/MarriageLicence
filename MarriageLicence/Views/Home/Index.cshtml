@@ -1,31 +1,535 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model MarriageLicence.Models.MarriageLicenseViewModel
+
+@{
+    ViewBag.Title = "Marriage License";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="card">
+    <div class="card-header" style="background-color:#00447c">
+        <img class="card-img-top" src="~/Content/Images/whitbylogo.png" alt="Town of Whitby">
+        <span class="headBanner">Marriage License Application</span>
+    </div>
+
+    <div class="card-block">
+
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+        @using (Html.BeginForm("Home", "Index", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @id = "registrationForm", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-row">
+
+                <h4>Intented Marriage Date and Location Information</h4>
+                <br />
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.ProposedPlaceofMarriage, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.ProposedPlaceofMarriage, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.ProposedPlaceofMarriage, String.Empty, new { @style = "color:red;!important" })
+                </div>
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.ProposedDateofMarriage, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.ProposedDateofMarriage, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.ProposedDateofMarriage, String.Empty, new { @style = "color:red;!important" })
+                    <p>Format:yyyy/mm/dd</p>
+                </div>
+
+
+            </div>
+
+            <div class="form-row">
+
+                <h4>Applicant Information</h4>
+                <br />
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6 row text-xl-center">
+                    <p><strong>Applicant</strong></p>
+                </div>
+                <div class="form-group col-md-6 row text-xl-center">
+                    <p><strong>Joint Applicant</strong></p>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.ApplicantLastOrSingle, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.ApplicantLastOrSingle, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.ApplicantLastOrSingle, String.Empty, new { @style = "color:red;!important" })
+                </div>
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.JointApplicantLastOrSingle, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.JointApplicantLastOrSingle, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.JointApplicantLastOrSingle, String.Empty, new { @style = "color:red;!important" })
+                </div>
+
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.ApplicantFirstAndMiddle, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.ApplicantFirstAndMiddle, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.ApplicantFirstAndMiddle, String.Empty, new { @style = "color:red;!important" })
+                </div>
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.JointApplicantFirstAndMiddle, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.JointApplicantFirstAndMiddle, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.JointApplicantFirstAndMiddle, String.Empty, new { @style = "color:red;!important" })
+                </div>
+
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+
+
+                    <div class="form-check">
+                        <p class="col-form-label">Marital Status</p>
+                        @Html.CheckBoxFor(m => m.ApplicantNeverMarried, new { @class = "form-check-input" })
+                        @Html.LabelFor(m => m.ApplicantNeverMarried, new { @class = "form-check-label" })
+
+                        @Html.CheckBoxFor(m => m.ApplicantWidowed, new { @class = "form-check-input" })
+                        @Html.LabelFor(m => m.ApplicantWidowed, new { @class = "form-check-label" })
+
+                        @Html.CheckBoxFor(m => m.ApplicantDivorced, new { @class = "form-check-input" })
+                        @Html.LabelFor(m => m.ApplicantDivorced, new { @class = "form-check-label" })
+
+                    </div>
+
+                </div>
+
+                <div class="form-group col-md-6">
+
+                    <div class="form-check">
+                        <p class="col-form-label">Marital Status</p>
+                        @Html.CheckBoxFor(m => m.JointApplicantNeverMarried, new { @class = "form-check-input" })
+                        @Html.LabelFor(m => m.JointApplicantNeverMarried, new { @class = "form-check-label" })
+
+                        @Html.CheckBoxFor(m => m.JointApplicantWidowed, new { @class = "form-check-input" })
+                        @Html.LabelFor(m => m.JointApplicantWidowed, new { @class = "form-check-label" })
+
+                        @Html.CheckBoxFor(m => m.JointApplicantDivorced, new { @class = "form-check-input" })
+                        @Html.LabelFor(m => m.JointApplicantDivorced, new { @class = "form-check-label" })
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+
+                    <div class="col-md-4">
+
+                        @Html.LabelFor(m => m.ApplicantCountryOfDivorce, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.ApplicantCountryOfDivorce, new { @class = "form-control" })
+                    </div>
+
+                    <div class="col-md-4">
+                        @Html.LabelFor(m => m.ApplicantCityOfDivorce, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.ApplicantCityOfDivorce, new { @class = "form-control" })
+                    </div>
+                    <div class="col-md-4">
+                        @Html.LabelFor(m => m.ApplicantCourtFileNumber, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.ApplicantCourtFileNumber, new { @class = "form-control" })
+                    </div>
+
+                </div>
+
+                <div class="form-group col-md-6">
+
+
+                    <div class="col-md-4">
+                        @Html.LabelFor(m => m.JointApplicantCountryOfDivorce, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.JointApplicantCountryOfDivorce, new { @class = "form-control" })
+                    </div>
+
+                    <div class="col-md-4">
+                        @Html.LabelFor(m => m.JointApplicantCityOfDivorce, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.JointApplicantCityOfDivorce, new { @class = "form-control" })
+                    </div>
+
+                    <div class="col-md-4">
+                        @Html.LabelFor(m => m.JointApplicantCourtFileNumber, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.JointApplicantCourtFileNumber, new { @class = "form-control" })
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+
+                    <div class="col-md-5">
+
+                        @Html.LabelFor(m => m.ApplicantReligiousDenomination, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.ApplicantReligiousDenomination, new { @class = "form-control" })
+                    </div>
+
+                    <div class="col-md-2">
+                        @Html.LabelFor(m => m.ApplicantAge, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.ApplicantAge, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ApplicantAge, String.Empty, new { @style = "color:red;!important" })
+                    </div>
+
+                    <div class="col-md-5">
+                        @Html.LabelFor(m => m.ApplicantDateOfBirth, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.ApplicantDateOfBirth, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ApplicantDateOfBirth, String.Empty, new { @style = "color:red;!important" })
+                        <p>Format:yyyy/mm/dd</p>
+                    </div>
+
+                </div>
+
+                <div class="form-group col-md-6">
+
+
+                    <div class="col-md-5">
+                        @Html.LabelFor(m => m.JointApplicantReligiousDenomination, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.JointApplicantReligiousDenomination, new { @class = "form-control" })
+                    </div>
+
+                    <div class="col-md-2">
+                        @Html.LabelFor(m => m.JointApplicantAge, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.JointApplicantAge, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.JointApplicantAge, String.Empty, new { @style = "color:red;!important" })
+                    </div>
+
+                    <div class="col-md-5">
+                        @Html.LabelFor(m => m.JointApplicantDateOfBirth, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.JointApplicantDateOfBirth, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.JointApplicantDateOfBirth, String.Empty, new { @style = "color:red;!important" })
+                        <p>Format:yyyy/mm/dd</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            @*==============PARENT INFORMATION================================================================== *@
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.ApplicantParent1Name, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.ApplicantParent1Name, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.JointApplicantParent1Name, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.JointApplicantParent1Name, new { @class = "form-control" })
+                </div>
+
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.ApplicantParent1PlaceOfBirth, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.ApplicantParent1PlaceOfBirth, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.JointApplicantParent1PlaceOfBirth, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.JointApplicantParent1PlaceOfBirth, new { @class = "form-control" })
+                </div>
+
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.ApplicantParent2Name, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.ApplicantParent2Name, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.JointApplicantParent2Name, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.JointApplicantParent2Name, new { @class = "form-control" })
+                </div>
+
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.ApplicantParent2PlaceOfBirth, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.ApplicantParent2PlaceOfBirth, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.JointApplicantParent2PlaceOfBirth, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.JointApplicantParent2PlaceOfBirth, new { @class = "form-control" })
+                </div>
+
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.ApplicantParent3Name, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.ApplicantParent3Name, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.JointApplicantParent3Name, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.JointApplicantParent3Name, new { @class = "form-control" })
+                </div>
+
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.ApplicantParent3PlaceOfBirth, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.ApplicantParent3PlaceOfBirth, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.JointApplicantParent3PlaceOfBirth, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.JointApplicantParent3PlaceOfBirth, new { @class = "form-control" })
+                </div>
+
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.ApplicantParent4Name, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.ApplicantParent4Name, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.JointApplicantParent1Name, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.JointApplicantParent1Name, new { @class = "form-control" })
+                </div>
+
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.ApplicantParent4PlaceOfBirth, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.ApplicantParent4PlaceOfBirth, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.JointApplicantParent4PlaceOfBirth, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.JointApplicantParent4PlaceOfBirth, new { @class = "form-control" })
+                </div>
+
+
+            </div>
+
+
+
+            @************CONTACT INFORMATION*******************************************************************************@
+
+            <div class="form-row">
+
+                <h4>Applicant Contact Information</h4>
+                <br />
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6 row text-xl-center">
+                    <p><strong>Applicant</strong></p>
+                </div>
+                <div class="form-group col-md-6 row text-xl-center">
+                    <p><strong>Joint Applicant</strong></p>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+
+                    <div class="form-group col-md-8">
+
+                        @Html.LabelFor(m => m.ApplicantAddress, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.ApplicantAddress, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ApplicantAddress, String.Empty, new { @style = "color:red;!important" })
+                    </div>
+
+                    <div class="form-group col-md-2">
+
+                        @Html.LabelFor(m => m.ApplicantAppartment, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.ApplicantAppartment, new { @class = "form-control" })
+                    </div>
+
+
+                </div>
+
+                <div class="form-group col-md-6">
+
+                    <div class="form-group col-md-8">
+
+                        @Html.LabelFor(m => m.JointApplicantAddress, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.JointApplicantAddress, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.JointApplicantAddress, String.Empty, new { @style = "color:red;!important" })
+                    </div>
+
+                    <div class="form-group col-md-2">
+
+                        @Html.LabelFor(m => m.JointApplicantAppartment, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.JointApplicantAppartment, new { @class = "form-control" })
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+
+                    <div class="form-group col-md-8">
+
+                        @Html.LabelFor(m => m.ApplicantCity, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.ApplicantCity, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ApplicantCity, String.Empty, new { @style = "color:red;!important" })
+                    </div>
+
+                    <div class="form-group col-md-2">
+
+                        @Html.LabelFor(m => m.ApplicantProvince, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.ApplicantProvince, new { @class = "form-control", @Value = "ON" })
+                        @Html.ValidationMessageFor(m => m.ApplicantProvince, String.Empty, new { @style = "color:red;!important" })
+                    </div>
+
+
+                </div>
+
+                <div class="form-group col-md-6">
+
+                    <div class="form-group col-md-8">
+
+                        @Html.LabelFor(m => m.JointApplicantCity, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.JointApplicantCity, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.JointApplicantCity, String.Empty, new { @style = "color:red;!important" })
+                    </div>
+
+                    <div class="form-group col-md-2">
+
+                        @Html.LabelFor(m => m.JointApplicantProvince, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.JointApplicantProvince, new { @class = "form-control", @Value = "ON" })
+                        @Html.ValidationMessageFor(m => m.JointApplicantProvince, String.Empty, new { @style = "color:red;!important" })
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+
+                    <div class="form-group col-md-6">
+
+                        @Html.LabelFor(m => m.ApplicantPostalCode, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.ApplicantPostalCode, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ApplicantPostalCode, String.Empty, new { @style = "color:red;!important" })
+                    </div>
+
+                    <div class="form-group col-md-6">
+
+                        @Html.LabelFor(m => m.ApplicantTelephoneNumber, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.ApplicantTelephoneNumber, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ApplicantTelephoneNumber, String.Empty, new { @style = "color:red;!important" })
+                    </div>
+
+
+                </div>
+
+                <div class="form-group col-md-6">
+
+                    <div class="form-group col-md-6">
+
+                        @Html.LabelFor(m => m.JointApplicantPostalCode, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.JointApplicantPostalCode, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.JointApplicantPostalCode, String.Empty, new { @style = "color:red;!important" })
+                    </div>
+
+                    <div class="form-group col-md-6">
+
+                        @Html.LabelFor(m => m.JointApplicantTelephoneNumber, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.JointApplicantTelephoneNumber, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.JointApplicantTelephoneNumber, String.Empty, new { @style = "color:red;!important" })
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="form-group-row">
+
+                <div class="form-group col-md-10">
+                    @Html.LabelFor(m => m.EmailAddress, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.EmailAddress, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.EmailAddress, String.Empty, new { @style = "color:red;!important" })
+                </div>
+
+            </div>
+
+            <div class="form-group row text-lg-center">
+                <div class="col-sm-10">
+                    <input type="submit" value="Submit Application" class="btn btn-primary" />
+                </div>
+            </div>
+
+
+        }
+    </div>
+
+
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+
+
+}

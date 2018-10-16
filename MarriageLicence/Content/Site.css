@@ -1,11 +1,11 @@
-﻿.headBanner {
-    color: #ffffff;
-    font-size: x-large;
-}
-
-body {
+﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+}
+
+.headBanner {
+    color: #ffffff;
+    font-size: x-large;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -25,5 +25,25 @@ body {
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 400px;
+}
+
+/* Bootstrap Override */
+[type="checkbox"], [type="radio"] {
+    position: relative;
+    margin: 6px 0 0 0;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+.form-check-label {
+
+    padding-left: 0px;
+    margin-right: 15px;
+    cursor: pointer;
 }

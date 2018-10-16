@@ -509,6 +509,7 @@
                     @Html.LabelFor(m => m.EmailAddress, new { @class = "form-label" })
                     @Html.TextBoxFor(m => m.EmailAddress, new { @class = "form-control" })
                     @Html.ValidationMessageFor(m => m.EmailAddress, String.Empty, new { @style = "color:red;!important" })
+                    <p>Email address is required for sending email verification of application, The Town of Whitby does not keep this information on record</p>
                 </div>
 
             </div>

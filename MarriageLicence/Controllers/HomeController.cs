@@ -86,7 +86,7 @@ namespace MarriageLicence.Controllers
                 r.SubmitApplication(ml);
 
 
-
+                ViewBag.EmailAddress = vm.EmailAddress;
                 return View("Complete");
                 
             }

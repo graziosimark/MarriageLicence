@@ -1,7 +1,27 @@
 ﻿
 @{
     ViewBag.Title = "Complete";
+    string emailAddress = ViewBag.EmailAddress;
 }
 
-<h2>Complete</h2>
+<div class="card">
+    <div class="card-header" style="background-color:#00447c">
+        <img class="card-img-top" src="~/Content/Images/whitbylogo.png" alt="Town of Whitby">
+        <span class="headBanner">Marriage License Application</span>
+    </div>
+
+    <div class="card-block">
+        <div>
+            <h4>Your application has been sumbmitted. Your verification code is: </h4>
+        </div>
+
+        <div>
+            <h4>Your email verification and application have been sent to: </h4>
+            @Html.Raw(emailAddress)
+        </div>
+       
+    </div>
+
+
+</div>
 

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.adm.clr" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.core" />
+  <xs:element name="Find">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.adm.clr" minOccurs="0" name="criteria" nillable="true" type="q1:LicenseSearchOption" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.adm.clr" minOccurs="0" name="FindResult" nillable="true" type="q2:ArrayOfMarriageLicense" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMarriageLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.adm.clr" minOccurs="0" name="license" nillable="true" type="q3:MarriageLicense" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMarriageLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data" minOccurs="0" name="AddMarriageLicenseResult" nillable="true" type="q4:wsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMarriageLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.adm.clr" minOccurs="0" name="license" nillable="true" type="q5:MarriageLicense" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMarriageLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data" minOccurs="0" name="UpdateMarriageLicenseResult" nillable="true" type="q6:wsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllAddressLookups">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllAddressLookupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.adm.clr" minOccurs="0" name="AllAddressLookupsResult" nillable="true" type="q7:ArrayOfAddressLookup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllLicenseIssuers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllLicenseIssuersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.core" minOccurs="0" name="AllLicenseIssuersResult" nillable="true" type="q8:ArrayOfWhitbyEmployee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllMaritalStatuses">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllMaritalStatusesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.adm.clr" minOccurs="0" name="AllMaritalStatusesResult" nillable="true" type="q9:ArrayOfMaritalStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllApplicationValues">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllApplicationValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.adm.clr" minOccurs="0" name="AllApplicationValuesResult" nillable="true" type="q10:ArrayOfApplicationValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllPrinters">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllPrintersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.adm.clr" minOccurs="0" name="AllPrintersResult" nillable="true" type="q11:ArrayOfClerkPrinter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllPrintOptions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllPrintOptionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.adm.clr" minOccurs="0" name="AllPrintOptionsResult" nillable="true" type="q12:ArrayOfClerkPrintOption" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

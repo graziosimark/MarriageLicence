@@ -35,11 +35,29 @@
   <wsdl:message name="ILicensingService_UpdateMarriageLicense_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateMarriageLicenseResponse" />
   </wsdl:message>
+  <wsdl:message name="ILicensingService_AllAddressLookups_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllAddressLookups" />
+  </wsdl:message>
+  <wsdl:message name="ILicensingService_AllAddressLookups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllAddressLookupsResponse" />
+  </wsdl:message>
   <wsdl:message name="ILicensingService_AllLicenseIssuers_InputMessage">
     <wsdl:part name="parameters" element="tns:AllLicenseIssuers" />
   </wsdl:message>
   <wsdl:message name="ILicensingService_AllLicenseIssuers_OutputMessage">
     <wsdl:part name="parameters" element="tns:AllLicenseIssuersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicensingService_AllMaritalStatuses_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllMaritalStatuses" />
+  </wsdl:message>
+  <wsdl:message name="ILicensingService_AllMaritalStatuses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllMaritalStatusesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicensingService_AllApplicationValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllApplicationValues" />
+  </wsdl:message>
+  <wsdl:message name="ILicensingService_AllApplicationValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllApplicationValuesResponse" />
   </wsdl:message>
   <wsdl:message name="ILicensingService_AllPrinters_InputMessage">
     <wsdl:part name="parameters" element="tns:AllPrinters" />
@@ -66,9 +84,21 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ILicensingService/UpdateMarriageLicense" message="tns:ILicensingService_UpdateMarriageLicense_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ILicensingService/UpdateMarriageLicenseResponse" message="tns:ILicensingService_UpdateMarriageLicense_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="AllAddressLookups">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicensingService/AllAddressLookups" message="tns:ILicensingService_AllAddressLookups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicensingService/AllAddressLookupsResponse" message="tns:ILicensingService_AllAddressLookups_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="AllLicenseIssuers">
       <wsdl:input wsaw:Action="http://tempuri.org/ILicensingService/AllLicenseIssuers" message="tns:ILicensingService_AllLicenseIssuers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ILicensingService/AllLicenseIssuersResponse" message="tns:ILicensingService_AllLicenseIssuers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllMaritalStatuses">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicensingService/AllMaritalStatuses" message="tns:ILicensingService_AllMaritalStatuses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicensingService/AllMaritalStatusesResponse" message="tns:ILicensingService_AllMaritalStatuses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllApplicationValues">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicensingService/AllApplicationValues" message="tns:ILicensingService_AllApplicationValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicensingService/AllApplicationValuesResponse" message="tns:ILicensingService_AllApplicationValues_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AllPrinters">
       <wsdl:input wsaw:Action="http://tempuri.org/ILicensingService/AllPrinters" message="tns:ILicensingService_AllPrinters_InputMessage" />
@@ -109,8 +139,35 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="AllAddressLookups">
+      <soap:operation soapAction="http://tempuri.org/ILicensingService/AllAddressLookups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="AllLicenseIssuers">
       <soap:operation soapAction="http://tempuri.org/ILicensingService/AllLicenseIssuers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllMaritalStatuses">
+      <soap:operation soapAction="http://tempuri.org/ILicensingService/AllMaritalStatuses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllApplicationValues">
+      <soap:operation soapAction="http://tempuri.org/ILicensingService/AllApplicationValues" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.adm.clr" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Whitby.Framework.Data.adm.clr" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="LicenseSearchOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LicenseNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebRefNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LicenseSearchOption" nillable="true" type="tns:LicenseSearchOption" />
   <xs:complexType name="ArrayOfMarriageLicense">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="MarriageLicense" nillable="true" type="tns:MarriageLicense" />
@@ -20,15 +28,20 @@
       <xs:element minOccurs="0" name="ApplicantDivorced" type="xs:boolean" />
       <xs:element minOccurs="0" name="ApplicantFirstAndMiddle" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantLastOrSingle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicantMaritalStatus" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="ApplicantMonthOfBirth" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantNeverMarried" type="xs:boolean" />
-      <xs:element minOccurs="0" name="ApplicantParent1Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicantParent1FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicantParent1LastName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantParent1PlaceOfBirth" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ApplicantParent2Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicantParent2FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicantParent2LastName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantParent2PlaceOfBirth" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ApplicantParent3Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicantParent3FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicantParent3LastName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantParent3PlaceOfBirth" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ApplicantParent4Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicantParent4FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicantParent4LastName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantParent4PlaceOfBirth" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantPlaceOfBirth" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantPostalCode" nillable="true" type="xs:string" />
@@ -37,6 +50,7 @@
       <xs:element minOccurs="0" name="ApplicantTelephoneNumber" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantWidowed" type="xs:boolean" />
       <xs:element minOccurs="0" name="ApplicantYearOfBirth" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicationValue" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="DateIssued" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ID" type="xs:int" />
       <xs:element minOccurs="0" name="JointApplicantAddress" nillable="true" type="xs:string" />
@@ -51,15 +65,20 @@
       <xs:element minOccurs="0" name="JointApplicantDivorced" type="xs:boolean" />
       <xs:element minOccurs="0" name="JointApplicantFirstAndMiddle" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantLastOrSingle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JointApplicantMaritalStatus" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="JointApplicantMonthOfBirth" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantNeverMarried" type="xs:boolean" />
-      <xs:element minOccurs="0" name="JointApplicantParent1Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JointApplicantParent1FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JointApplicantParent1LastName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantParent1PlaceOfBirth" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="JointApplicantParent2Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JointApplicantParent2FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JointApplicantParent2LastName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantParent2PlaceOfBirth" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="JointApplicantParent3Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JointApplicantParent3FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JointApplicantParent3LastName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantParent3PlaceOfBirth" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="JointApplicantParent4Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JointApplicantParent4FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JointApplicantParent4LastName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantParent4PlaceOfBirth" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantPlaceOfBirth" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantPostalCode" nillable="true" type="xs:string" />
@@ -74,9 +93,52 @@
       <xs:element minOccurs="0" name="PresentAtPickup" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="ProposedDateOfMarriage" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ProposedPlaceOfMarriage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResidentEmail" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="MarriageLicense" nillable="true" type="tns:MarriageLicense" />
+  <xs:complexType name="ArrayOfAddressLookup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AddressLookup" nillable="true" type="tns:AddressLookup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddressLookup" nillable="true" type="tns:ArrayOfAddressLookup" />
+  <xs:complexType name="AddressLookup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="LongDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShortDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddressLookup" nillable="true" type="tns:AddressLookup" />
+  <xs:complexType name="ArrayOfMaritalStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MaritalStatus" nillable="true" type="tns:MaritalStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMaritalStatus" nillable="true" type="tns:ArrayOfMaritalStatus" />
+  <xs:complexType name="MaritalStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="MaritalLabel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaritalValue" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MaritalStatus" nillable="true" type="tns:MaritalStatus" />
+  <xs:complexType name="ArrayOfApplicationValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApplicationValue" nillable="true" type="tns:ApplicationValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApplicationValue" nillable="true" type="tns:ArrayOfApplicationValue" />
+  <xs:complexType name="ApplicationValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationLabel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicationValue1" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplicationValue" nillable="true" type="tns:ApplicationValue" />
   <xs:complexType name="ArrayOfClerkPrinter">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ClerkPrinter" nillable="true" type="tns:ClerkPrinter" />
@@ -102,7 +164,6 @@
       <xs:element minOccurs="0" name="PreviewSource" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PreviewTopMargin" type="xs:double" />
       <xs:element minOccurs="0" name="PreviewWidth" type="xs:double" />
-      <xs:element minOccurs="0" name="PrintOptions" nillable="true" type="tns:ArrayOfClerkPrintOption" />
       <xs:element minOccurs="0" name="PrinterName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ServerName" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -120,6 +181,7 @@
       <xs:element minOccurs="0" name="CompleteMessage" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ID" type="xs:int" />
       <xs:element minOccurs="0" name="LeftMargin" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="LicensePrinter" nillable="true" type="tns:ClerkPrinter" />
       <xs:element minOccurs="0" name="Module" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PageHeight" nillable="true" type="xs:double" />
       <xs:element minOccurs="0" name="PageSettings" nillable="true" type="xs:string" />
@@ -128,7 +190,6 @@
       <xs:element minOccurs="0" name="PaperSource" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PrintOption1" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Printer" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Printer1" nillable="true" type="tns:ClerkPrinter" />
       <xs:element minOccurs="0" name="PrinterID" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="RightMargin" nillable="true" type="xs:double" />
       <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />

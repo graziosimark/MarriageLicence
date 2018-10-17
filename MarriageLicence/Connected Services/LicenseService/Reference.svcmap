@@ -19,16 +19,16 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://th48www:100/lib/adm/LicensingService.svc/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://th48www:100/lib/adm/LicensingService.svc/mex/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="e2b7a61e-5bbc-4d8c-9b1d-27d7bdceaf71" SourceId="1" SourceUrl="http://th48www:100/lib/adm/LicensingService.svc/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="04f0c0d5-3182-4acc-9680-3904d1f4f221" SourceId="1" SourceUrl="http://th48www:100/lib/adm/LicensingService.svc/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="c9dd9178-104d-4580-8e7f-ce845972a7bf" SourceId="1" SourceUrl="http://th48www:100/lib/adm/LicensingService.svc/mex" />
-    <MetadataFile FileName="Whitby.Framework.Data.adm.clr.xsd" MetadataType="Schema" ID="6228ecd8-9878-4a10-ba93-1c8c263c7fef" SourceId="1" SourceUrl="http://th48www:100/lib/adm/LicensingService.svc/mex" />
-    <MetadataFile FileName="Whitby.Framework.Data.xsd" MetadataType="Schema" ID="a720de69-022e-4bdd-b38d-5df91f6f4007" SourceId="1" SourceUrl="http://th48www:100/lib/adm/LicensingService.svc/mex" />
-    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="73f4d8fa-16d1-428c-be66-6b1102df51f2" SourceId="1" SourceUrl="http://th48www:100/lib/adm/LicensingService.svc/mex" />
-    <MetadataFile FileName="Whitby.Framework.Data.core.xsd" MetadataType="Schema" ID="be770cfa-02b0-4c68-9f19-d1c73f920381" SourceId="1" SourceUrl="http://th48www:100/lib/adm/LicensingService.svc/mex" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="14079593-9e9d-4b52-b908-35b330576128" SourceId="1" SourceUrl="http://th48www:100/lib/adm/LicensingService.svc/mex/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="9d562cd2-5ecd-47c2-87be-67e65ab66ea3" SourceId="1" SourceUrl="http://th48www:100/lib/adm/LicensingService.svc/mex/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="f73f2aa0-e375-4932-9ede-b20eb4d54408" SourceId="1" SourceUrl="http://th48www:100/lib/adm/LicensingService.svc/mex/mex" />
+    <MetadataFile FileName="Whitby.Framework.Data.adm.clr1.xsd" MetadataType="Schema" ID="aa36cd16-b65d-48bf-bfff-2d9e2f36ad1e" SourceId="1" SourceUrl="http://th48www:100/lib/adm/LicensingService.svc/mex/mex" />
+    <MetadataFile FileName="Whitby.Framework.Data1.xsd" MetadataType="Schema" ID="4f4f0e49-ce63-4b0a-9e0a-25e237a8b21b" SourceId="1" SourceUrl="http://th48www:100/lib/adm/LicensingService.svc/mex/mex" />
+    <MetadataFile FileName="System1.xsd" MetadataType="Schema" ID="be4310c1-6ba4-4adc-865c-fcf06d9da5a4" SourceId="1" SourceUrl="http://th48www:100/lib/adm/LicensingService.svc/mex/mex" />
+    <MetadataFile FileName="Whitby.Framework.Data.core1.xsd" MetadataType="Schema" ID="67995c50-4d61-4fa9-9c49-72078d00c588" SourceId="1" SourceUrl="http://th48www:100/lib/adm/LicensingService.svc/mex/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

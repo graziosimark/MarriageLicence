@@ -180,6 +180,15 @@
     <Content Include="Connected Services\LicenseService\MarriageLicence.LicenseService.wsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\LicenseService\MarriageLicence.LicenseService.AddressLookup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\LicenseService\MarriageLicence.LicenseService.ApplicationValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\LicenseService\MarriageLicence.LicenseService.MaritalStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\LicenseService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -194,23 +203,23 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config" />
-    <None Include="Connected Services\LicenseService\service.wsdl" />
-    <None Include="Connected Services\LicenseService\service.xsd">
+    <None Include="Connected Services\LicenseService\service1.wsdl" />
+    <None Include="Connected Services\LicenseService\service2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LicenseService\service1.xsd">
+    <None Include="Connected Services\LicenseService\service21.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LicenseService\System.xsd">
+    <None Include="Connected Services\LicenseService\System1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LicenseService\Whitby.Framework.Data.adm.clr.xsd">
+    <None Include="Connected Services\LicenseService\Whitby.Framework.Data.adm.clr1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LicenseService\Whitby.Framework.Data.core.xsd">
+    <None Include="Connected Services\LicenseService\Whitby.Framework.Data.core1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LicenseService\Whitby.Framework.Data.xsd">
+    <None Include="Connected Services\LicenseService\Whitby.Framework.Data1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -236,6 +245,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Complete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

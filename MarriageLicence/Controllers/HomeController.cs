@@ -24,6 +24,7 @@ namespace MarriageLicence.Controllers
             {
 
                 LicenseService.MarriageLicense ml = new LicenseService.MarriageLicense();
+                Repository r = new Repository();
                 
                 
                 ml.ProposedDateOfMarriage = Convert.ToDateTime(vm.ProposedDateofMarriage);
@@ -39,13 +40,13 @@ namespace MarriageLicence.Controllers
                 ml.ApplicantAge = Convert.ToInt16(vm.ApplicantAge);
                 ml.ApplicantDateOfBirth = Convert.ToDateTime(vm.ApplicantDateOfBirth);
                 ml.ApplicantPlaceOfBirth = vm.ApplicantPlaceOfBirth;
-                ml.ApplicantParent1Name = vm.ApplicantParent1Name;
+                ml.ApplicantParent1FirstName = vm.ApplicantParent1Name;
                 ml.ApplicantParent1PlaceOfBirth = vm.ApplicantParent1PlaceOfBirth;
-                ml.ApplicantParent2Name = vm.ApplicantParent2Name;
+                ml.ApplicantParent2FirstName = vm.ApplicantParent2Name;
                 ml.ApplicantParent2PlaceOfBirth = vm.ApplicantParent2PlaceOfBirth;
-                ml.ApplicantParent3Name = vm.ApplicantParent3Name;
+                ml.ApplicantParent3FirstName = vm.ApplicantParent3Name;
                 ml.ApplicantParent3PlaceOfBirth = vm.ApplicantParent3PlaceOfBirth;
-                ml.ApplicantParent4Name = vm.ApplicantParent4Name;
+                ml.ApplicantParent4FirstName = vm.ApplicantParent4Name;
                 ml.ApplicantParent4PlaceOfBirth = vm.ApplicantParent4PlaceOfBirth;
                 ml.ApplicantAddress = vm.ApplicantAddress;
                 ml.ApplicantApartment = vm.ApplicantAppartment;
@@ -66,13 +67,13 @@ namespace MarriageLicence.Controllers
                 ml.JointApplicantAge = Convert.ToInt16(vm.JointApplicantAge);
                 ml.JointApplicantDateOfBirth = Convert.ToDateTime(vm.JointApplicantDateOfBirth);
                 ml.JointApplicantPlaceOfBirth = vm.JointApplicantPlaceOfBirth;
-                ml.JointApplicantParent1Name = vm.JointApplicantParent1Name;
+                ml.JointApplicantParent1FirstName = vm.JointApplicantParent1Name;
                 ml.JointApplicantParent1PlaceOfBirth = vm.JointApplicantParent1PlaceOfBirth;
-                ml.JointApplicantParent2Name = vm.JointApplicantParent2Name;
+                ml.JointApplicantParent2FirstName = vm.JointApplicantParent2Name;
                 ml.JointApplicantParent2PlaceOfBirth = vm.JointApplicantParent2PlaceOfBirth;
-                ml.JointApplicantParent3Name = vm.JointApplicantParent3Name;
+                ml.JointApplicantParent3FirstName = vm.JointApplicantParent3Name;
                 ml.JointApplicantParent3PlaceOfBirth = vm.JointApplicantParent3PlaceOfBirth;
-                ml.JointApplicantParent4Name = vm.JointApplicantParent4Name;
+                ml.JointApplicantParent4FirstName = vm.JointApplicantParent4Name;
                 ml.JointApplicantParent4PlaceOfBirth = vm.JointApplicantParent4PlaceOfBirth;
                 ml.JointApplicantAddress = vm.JointApplicantAddress;
                 ml.JointApplicantApartment = vm.JointApplicantAppartment;
@@ -80,12 +81,14 @@ namespace MarriageLicence.Controllers
                 ml.JointApplicantProvince = vm.JointApplicantProvince;
                 ml.JointApplicantPostalCode = vm.JointApplicantPostalCode;
                 ml.JointApplicantTelephoneNumber = vm.JointApplicantTelephoneNumber;
+                ml.ResidentEmail = vm.EmailAddress;
 
-                //email address goes here.
+                r.SubmitApplication(ml);
 
 
 
-                return View();
+                return View("Complete");
+                
             }
             else
 

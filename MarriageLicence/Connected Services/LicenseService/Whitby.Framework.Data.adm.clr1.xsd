@@ -31,17 +31,13 @@
       <xs:element minOccurs="0" name="ApplicantMaritalStatus" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="ApplicantMonthOfBirth" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantNeverMarried" type="xs:boolean" />
-      <xs:element minOccurs="0" name="ApplicantParent1FirstName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ApplicantParent1LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicantParent1Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantParent1PlaceOfBirth" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ApplicantParent2FirstName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ApplicantParent2LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicantParent2Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantParent2PlaceOfBirth" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ApplicantParent3FirstName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ApplicantParent3LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicantParent3Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantParent3PlaceOfBirth" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ApplicantParent4FirstName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ApplicantParent4LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicantParent4Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantParent4PlaceOfBirth" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantPlaceOfBirth" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ApplicantPostalCode" nillable="true" type="xs:string" />
@@ -68,17 +64,13 @@
       <xs:element minOccurs="0" name="JointApplicantMaritalStatus" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="JointApplicantMonthOfBirth" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantNeverMarried" type="xs:boolean" />
-      <xs:element minOccurs="0" name="JointApplicantParent1FirstName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="JointApplicantParent1LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JointApplicantParent1Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantParent1PlaceOfBirth" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="JointApplicantParent2FirstName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="JointApplicantParent2LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JointApplicantParent2Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantParent2PlaceOfBirth" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="JointApplicantParent3FirstName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="JointApplicantParent3LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JointApplicantParent3Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantParent3PlaceOfBirth" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="JointApplicantParent4FirstName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="JointApplicantParent4LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JointApplicantParent4Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantParent4PlaceOfBirth" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantPlaceOfBirth" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JointApplicantPostalCode" nillable="true" type="xs:string" />
@@ -133,9 +125,9 @@
   <xs:element name="ArrayOfApplicationValue" nillable="true" type="tns:ArrayOfApplicationValue" />
   <xs:complexType name="ApplicationValue">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ApplicationLabel" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ApplicationValue1" type="xs:int" />
       <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ApplicationValue" nillable="true" type="tns:ApplicationValue" />

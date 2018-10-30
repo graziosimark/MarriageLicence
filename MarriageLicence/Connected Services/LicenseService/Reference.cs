@@ -145,37 +145,25 @@ namespace MarriageLicence.LicenseService {
         private bool ApplicantNeverMarriedField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ApplicantParent1FirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ApplicantParent1LastNameField;
+        private string ApplicantParent1NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ApplicantParent1PlaceOfBirthField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ApplicantParent2FirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ApplicantParent2LastNameField;
+        private string ApplicantParent2NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ApplicantParent2PlaceOfBirthField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ApplicantParent3FirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ApplicantParent3LastNameField;
+        private string ApplicantParent3NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ApplicantParent3PlaceOfBirthField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ApplicantParent4FirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ApplicantParent4LastNameField;
+        private string ApplicantParent4NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ApplicantParent4PlaceOfBirthField;
@@ -256,37 +244,25 @@ namespace MarriageLicence.LicenseService {
         private bool JointApplicantNeverMarriedField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string JointApplicantParent1FirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string JointApplicantParent1LastNameField;
+        private string JointApplicantParent1NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string JointApplicantParent1PlaceOfBirthField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string JointApplicantParent2FirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string JointApplicantParent2LastNameField;
+        private string JointApplicantParent2NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string JointApplicantParent2PlaceOfBirthField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string JointApplicantParent3FirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string JointApplicantParent3LastNameField;
+        private string JointApplicantParent3NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string JointApplicantParent3PlaceOfBirthField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string JointApplicantParent4FirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string JointApplicantParent4LastNameField;
+        private string JointApplicantParent4NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string JointApplicantParent4PlaceOfBirthField;
@@ -539,27 +515,14 @@ namespace MarriageLicence.LicenseService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ApplicantParent1FirstName {
+        public string ApplicantParent1Name {
             get {
-                return this.ApplicantParent1FirstNameField;
+                return this.ApplicantParent1NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.ApplicantParent1FirstNameField, value) != true)) {
-                    this.ApplicantParent1FirstNameField = value;
-                    this.RaisePropertyChanged("ApplicantParent1FirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ApplicantParent1LastName {
-            get {
-                return this.ApplicantParent1LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ApplicantParent1LastNameField, value) != true)) {
-                    this.ApplicantParent1LastNameField = value;
-                    this.RaisePropertyChanged("ApplicantParent1LastName");
+                if ((object.ReferenceEquals(this.ApplicantParent1NameField, value) != true)) {
+                    this.ApplicantParent1NameField = value;
+                    this.RaisePropertyChanged("ApplicantParent1Name");
                 }
             }
         }
@@ -578,27 +541,14 @@ namespace MarriageLicence.LicenseService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ApplicantParent2FirstName {
+        public string ApplicantParent2Name {
             get {
-                return this.ApplicantParent2FirstNameField;
+                return this.ApplicantParent2NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.ApplicantParent2FirstNameField, value) != true)) {
-                    this.ApplicantParent2FirstNameField = value;
-                    this.RaisePropertyChanged("ApplicantParent2FirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ApplicantParent2LastName {
-            get {
-                return this.ApplicantParent2LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ApplicantParent2LastNameField, value) != true)) {
-                    this.ApplicantParent2LastNameField = value;
-                    this.RaisePropertyChanged("ApplicantParent2LastName");
+                if ((object.ReferenceEquals(this.ApplicantParent2NameField, value) != true)) {
+                    this.ApplicantParent2NameField = value;
+                    this.RaisePropertyChanged("ApplicantParent2Name");
                 }
             }
         }
@@ -617,27 +567,14 @@ namespace MarriageLicence.LicenseService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ApplicantParent3FirstName {
+        public string ApplicantParent3Name {
             get {
-                return this.ApplicantParent3FirstNameField;
+                return this.ApplicantParent3NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.ApplicantParent3FirstNameField, value) != true)) {
-                    this.ApplicantParent3FirstNameField = value;
-                    this.RaisePropertyChanged("ApplicantParent3FirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ApplicantParent3LastName {
-            get {
-                return this.ApplicantParent3LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ApplicantParent3LastNameField, value) != true)) {
-                    this.ApplicantParent3LastNameField = value;
-                    this.RaisePropertyChanged("ApplicantParent3LastName");
+                if ((object.ReferenceEquals(this.ApplicantParent3NameField, value) != true)) {
+                    this.ApplicantParent3NameField = value;
+                    this.RaisePropertyChanged("ApplicantParent3Name");
                 }
             }
         }
@@ -656,27 +593,14 @@ namespace MarriageLicence.LicenseService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ApplicantParent4FirstName {
+        public string ApplicantParent4Name {
             get {
-                return this.ApplicantParent4FirstNameField;
+                return this.ApplicantParent4NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.ApplicantParent4FirstNameField, value) != true)) {
-                    this.ApplicantParent4FirstNameField = value;
-                    this.RaisePropertyChanged("ApplicantParent4FirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ApplicantParent4LastName {
-            get {
-                return this.ApplicantParent4LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ApplicantParent4LastNameField, value) != true)) {
-                    this.ApplicantParent4LastNameField = value;
-                    this.RaisePropertyChanged("ApplicantParent4LastName");
+                if ((object.ReferenceEquals(this.ApplicantParent4NameField, value) != true)) {
+                    this.ApplicantParent4NameField = value;
+                    this.RaisePropertyChanged("ApplicantParent4Name");
                 }
             }
         }
@@ -1020,27 +944,14 @@ namespace MarriageLicence.LicenseService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string JointApplicantParent1FirstName {
+        public string JointApplicantParent1Name {
             get {
-                return this.JointApplicantParent1FirstNameField;
+                return this.JointApplicantParent1NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.JointApplicantParent1FirstNameField, value) != true)) {
-                    this.JointApplicantParent1FirstNameField = value;
-                    this.RaisePropertyChanged("JointApplicantParent1FirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string JointApplicantParent1LastName {
-            get {
-                return this.JointApplicantParent1LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.JointApplicantParent1LastNameField, value) != true)) {
-                    this.JointApplicantParent1LastNameField = value;
-                    this.RaisePropertyChanged("JointApplicantParent1LastName");
+                if ((object.ReferenceEquals(this.JointApplicantParent1NameField, value) != true)) {
+                    this.JointApplicantParent1NameField = value;
+                    this.RaisePropertyChanged("JointApplicantParent1Name");
                 }
             }
         }
@@ -1059,27 +970,14 @@ namespace MarriageLicence.LicenseService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string JointApplicantParent2FirstName {
+        public string JointApplicantParent2Name {
             get {
-                return this.JointApplicantParent2FirstNameField;
+                return this.JointApplicantParent2NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.JointApplicantParent2FirstNameField, value) != true)) {
-                    this.JointApplicantParent2FirstNameField = value;
-                    this.RaisePropertyChanged("JointApplicantParent2FirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string JointApplicantParent2LastName {
-            get {
-                return this.JointApplicantParent2LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.JointApplicantParent2LastNameField, value) != true)) {
-                    this.JointApplicantParent2LastNameField = value;
-                    this.RaisePropertyChanged("JointApplicantParent2LastName");
+                if ((object.ReferenceEquals(this.JointApplicantParent2NameField, value) != true)) {
+                    this.JointApplicantParent2NameField = value;
+                    this.RaisePropertyChanged("JointApplicantParent2Name");
                 }
             }
         }
@@ -1098,27 +996,14 @@ namespace MarriageLicence.LicenseService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string JointApplicantParent3FirstName {
+        public string JointApplicantParent3Name {
             get {
-                return this.JointApplicantParent3FirstNameField;
+                return this.JointApplicantParent3NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.JointApplicantParent3FirstNameField, value) != true)) {
-                    this.JointApplicantParent3FirstNameField = value;
-                    this.RaisePropertyChanged("JointApplicantParent3FirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string JointApplicantParent3LastName {
-            get {
-                return this.JointApplicantParent3LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.JointApplicantParent3LastNameField, value) != true)) {
-                    this.JointApplicantParent3LastNameField = value;
-                    this.RaisePropertyChanged("JointApplicantParent3LastName");
+                if ((object.ReferenceEquals(this.JointApplicantParent3NameField, value) != true)) {
+                    this.JointApplicantParent3NameField = value;
+                    this.RaisePropertyChanged("JointApplicantParent3Name");
                 }
             }
         }
@@ -1137,27 +1022,14 @@ namespace MarriageLicence.LicenseService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string JointApplicantParent4FirstName {
+        public string JointApplicantParent4Name {
             get {
-                return this.JointApplicantParent4FirstNameField;
+                return this.JointApplicantParent4NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.JointApplicantParent4FirstNameField, value) != true)) {
-                    this.JointApplicantParent4FirstNameField = value;
-                    this.RaisePropertyChanged("JointApplicantParent4FirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string JointApplicantParent4LastName {
-            get {
-                return this.JointApplicantParent4LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.JointApplicantParent4LastNameField, value) != true)) {
-                    this.JointApplicantParent4LastNameField = value;
-                    this.RaisePropertyChanged("JointApplicantParent4LastName");
+                if ((object.ReferenceEquals(this.JointApplicantParent4NameField, value) != true)) {
+                    this.JointApplicantParent4NameField = value;
+                    this.RaisePropertyChanged("JointApplicantParent4Name");
                 }
             }
         }
@@ -2277,13 +2149,13 @@ namespace MarriageLicence.LicenseService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ApplicationLabelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ApplicationValue1Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LabelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ValueField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -2296,32 +2168,6 @@ namespace MarriageLicence.LicenseService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ApplicationLabel {
-            get {
-                return this.ApplicationLabelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ApplicationLabelField, value) != true)) {
-                    this.ApplicationLabelField = value;
-                    this.RaisePropertyChanged("ApplicationLabel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ApplicationValue1 {
-            get {
-                return this.ApplicationValue1Field;
-            }
-            set {
-                if ((this.ApplicationValue1Field.Equals(value) != true)) {
-                    this.ApplicationValue1Field = value;
-                    this.RaisePropertyChanged("ApplicationValue1");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public int ID {
             get {
                 return this.IDField;
@@ -2330,6 +2176,32 @@ namespace MarriageLicence.LicenseService {
                 if ((this.IDField.Equals(value) != true)) {
                     this.IDField = value;
                     this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Label {
+            get {
+                return this.LabelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LabelField, value) != true)) {
+                    this.LabelField = value;
+                    this.RaisePropertyChanged("Label");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Value {
+            get {
+                return this.ValueField;
+            }
+            set {
+                if ((this.ValueField.Equals(value) != true)) {
+                    this.ValueField = value;
+                    this.RaisePropertyChanged("Value");
                 }
             }
         }

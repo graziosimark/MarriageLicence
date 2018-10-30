@@ -63,25 +63,25 @@ namespace MarriageLicence.Models
         [Display(Name = "Province where applicant was born(if outside Canada, state the country)")]
         public string ApplicantPlaceOfBirth { get; set; }
 
-        [Display(Name = "Parent's name(last,first and middle or single name")]
+        [Display(Name = "Parent 1 name(last,first and middle or single name")]
         public string ApplicantParent1Name { get; set; }
 
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
         public string ApplicantParent1PlaceOfBirth { get; set; }
 
-        [Display(Name = "Parent's name(last,first and middle or single name")]
+        [Display(Name = "Parent 2 name(last,first and middle or single name")]
         public string ApplicantParent2Name { get; set; }
 
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
         public string ApplicantParent2PlaceOfBirth { get; set; }
 
-        [Display(Name = "Parent's name(last,first and middle or single name")]
+        [Display(Name = "Parent 3 name(last,first and middle or single name")]
         public string ApplicantParent3Name { get; set; }
 
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
         public string ApplicantParent3PlaceOfBirth { get; set; }
 
-        [Display(Name = "Parent's name(last,first and middle or single name)")]
+        [Display(Name = "Parent 4 name(last,first and middle or single name)")]
         public string ApplicantParent4Name { get; set; }
 
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
@@ -159,25 +159,25 @@ namespace MarriageLicence.Models
         [Display(Name = "Province where applicant was born(if outside Canada, state the country)")]
         public string JointApplicantPlaceOfBirth { get; set; }
 
-        [Display(Name = "Parent's name(last,first and middle or single name)")]
+        [Display(Name = "Parent 1 name(last,first and middle or single name)")]
         public string JointApplicantParent1Name { get; set; }
 
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
         public string JointApplicantParent1PlaceOfBirth { get; set; }
 
-        [Display(Name = "Parent's name(last,first and middle or single name)")]
+        [Display(Name = "Parent 2 name(last,first and middle or single name)")]
         public string JointApplicantParent2Name { get; set; }
 
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
         public string JointApplicantParent2PlaceOfBirth { get; set; }
 
-        [Display(Name = "Parent's name(last,first and middle or single name)")]
+        [Display(Name = "Parent 3 name(last,first and middle or single name)")]
         public string JointApplicantParent3Name { get; set; }
 
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
         public string JointApplicantParent3PlaceOfBirth { get; set; }
 
-        [Display(Name = "Parent's name(last,first and middle or single name)")]
+        [Display(Name = "Parent 4 name(last,first and middle or single name)")]
         public string JointApplicantParent4Name { get; set; }
 
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MarriageLicence.Models;
+using MarriageLicence.LicenseService;
 
 namespace MarriageLicence.Controllers
 {
@@ -82,11 +83,12 @@ namespace MarriageLicence.Controllers
                 ml.JointApplicantPostalCode = vm.JointApplicantPostalCode;
                 ml.JointApplicantTelephoneNumber = vm.JointApplicantTelephoneNumber;
                 ml.ResidentEmail = vm.EmailAddress;
-                
 
-                r.SubmitApplication(ml);
+                wsResponse x;
 
+                x = r.SubmitApplication(ml);
 
+                ViewBag.ResponseID = x.PrimaryKeyId.ToString();
                 ViewBag.EmailAddress = vm.EmailAddress;
                 return View("Complete");
                 

@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Complete";
     string emailAddress = ViewBag.EmailAddress;
+    string respID = ViewBag.ResponseID;
 }
 
 <div class="card">
@@ -13,11 +14,12 @@
     <div class="card-block">
         <div>
             <h4>Your application has been sumbmitted. Your verification code is: </h4>
+            <h4>@Html.Raw(respID)</h4>
         </div>
 
         <div>
             <h4>Your email verification and application have been sent to: </h4>
-            @Html.Raw(emailAddress)
+            <h4>@Html.Raw(emailAddress)</h4>
         </div>
        
     </div>

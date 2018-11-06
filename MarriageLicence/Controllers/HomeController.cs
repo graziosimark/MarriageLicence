@@ -26,8 +26,9 @@ namespace MarriageLicence.Controllers
 
                 LicenseService.MarriageLicense ml = new LicenseService.MarriageLicense();
                 Repository r = new Repository();
-                
-                
+
+
+                ml.ProposedPlaceOfMarriage = vm.ProposedPlaceofMarriage;
                 ml.ProposedDateOfMarriage = Convert.ToDateTime(vm.ProposedDateofMarriage);
                 ml.ApplicantLastOrSingle = vm.ApplicantLastOrSingle;
                 ml.ApplicantFirstAndMiddle = vm.ApplicantFirstAndMiddle;

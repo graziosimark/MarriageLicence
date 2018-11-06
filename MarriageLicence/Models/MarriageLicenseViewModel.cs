@@ -9,6 +9,7 @@ namespace MarriageLicence.Models
 {
     public class MarriageLicenseViewModel
     {
+        [StringLength(100)]
         [Required(ErrorMessage = "*Required")]
         [Display(Name = "Proposed Place of Marriage (town/city)")]
         public string ProposedPlaceofMarriage { get; set; }
@@ -20,10 +21,12 @@ namespace MarriageLicence.Models
 
         //-----------APPLICANT---------------------------------------------
         //-----------------------------------------------------------------
+        [StringLength(100)]
         [Required(ErrorMessage = "*Required")]
         [Display(Name = "Current last name or single name")]
         public string ApplicantLastOrSingle { get; set; }
 
+        [StringLength(100)]
         [Required(ErrorMessage = "*Required")]
         [Display(Name = "First and middle names")]
         public string ApplicantFirstAndMiddle { get; set; }
@@ -37,15 +40,19 @@ namespace MarriageLicence.Models
         [Display(Name = "Divorced")]
         public bool ApplicantDivorced { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Country of divorce")]
         public string ApplicantCountryOfDivorce { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "City of divorce")]
         public string ApplicantCityOfDivorce { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Court file number")]
         public string ApplicantCourtFileNumber { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Religious denomination")]
         public string ApplicantReligiousDenomination { get; set; }
 
@@ -59,45 +66,58 @@ namespace MarriageLicence.Models
         [Display(Name = "Date of birth")]
         public string ApplicantDateOfBirth { get; set; }
 
+        [StringLength(100)]
         [Required(ErrorMessage = "*Required")]
         [Display(Name = "Province where applicant was born(if outside Canada, state the country)")]
         public string ApplicantPlaceOfBirth { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Parent 1 name(last,first and middle or single name")]
         public string ApplicantParent1Name { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
         public string ApplicantParent1PlaceOfBirth { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Parent 2 name(last,first and middle or single name")]
         public string ApplicantParent2Name { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
         public string ApplicantParent2PlaceOfBirth { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Parent 3 name(last,first and middle or single name")]
         public string ApplicantParent3Name { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
         public string ApplicantParent3PlaceOfBirth { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Parent 4 name(last,first and middle or single name)")]
         public string ApplicantParent4Name { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
         public string ApplicantParent4PlaceOfBirth { get; set; }
-        
+
+        [StringLength(100)]
         [Required(ErrorMessage = "*Required")]
         [Display(Name = "Present Address (street number and name)")]
         public string ApplicantAddress { get; set; }
-        
+
+        [StringLength(100)]
         [Display(Name = "Apartment")]
         public string ApplicantAppartment { get; set; }
 
+        [StringLength(100)]
         [Required(ErrorMessage = "*Required")]
         [Display(Name = "City")]
         public string ApplicantCity { get; set; }
 
+        [StringLength(100)]
         [Required(ErrorMessage = "*Required")]
         [Display(Name = "Province")]
         public string ApplicantProvince { get; set; }
@@ -116,10 +136,12 @@ namespace MarriageLicence.Models
 
         //-----------JOINT APPLICANT-------------------------------------------------------------------------------------------------
         //---------------------------------------------------------------------------------------------------------------------------
+        [StringLength(100)]
         [Required(ErrorMessage = "*Required")]
         [Display(Name = "Current last name or single name")]
         public string JointApplicantLastOrSingle { get; set; }
 
+        [StringLength(100)]
         [Required(ErrorMessage = "*Required")]
         [Display(Name = "First and middle names")]
         public string JointApplicantFirstAndMiddle { get; set; }
@@ -133,15 +155,19 @@ namespace MarriageLicence.Models
         [Display(Name = "Divorced")]
         public bool JointApplicantDivorced { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Country of divorce")]
         public string JointApplicantCountryOfDivorce { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "City of divorce")]
         public string JointApplicantCityOfDivorce { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Court file number")]
         public string JointApplicantCourtFileNumber { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Religious denomination")]
         public string JointApplicantReligiousDenomination { get; set; }
 
@@ -155,51 +181,65 @@ namespace MarriageLicence.Models
         [Display(Name = "Date of birth")]
         public string JointApplicantDateOfBirth { get; set; }
 
+        [StringLength(100)]
         [Required(ErrorMessage = "*Required")]
         [Display(Name = "Province where applicant was born(if outside Canada, state the country)")]
         public string JointApplicantPlaceOfBirth { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Parent 1 name(last,first and middle or single name)")]
         public string JointApplicantParent1Name { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
         public string JointApplicantParent1PlaceOfBirth { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Parent 2 name(last,first and middle or single name)")]
         public string JointApplicantParent2Name { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
         public string JointApplicantParent2PlaceOfBirth { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Parent 3 name(last,first and middle or single name)")]
         public string JointApplicantParent3Name { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
         public string JointApplicantParent3PlaceOfBirth { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Parent 4 name(last,first and middle or single name)")]
         public string JointApplicantParent4Name { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Province where the applicant's parent was born(if outside of Canada, state the country)")]
         public string JointApplicantParent4PlaceOfBirth { get; set; }
 
+        [StringLength(100)]
         [Required(ErrorMessage = "*Required")]
         [Display(Name = "Present Address (street number and name)")]
         public string JointApplicantAddress { get; set; }
 
+        [StringLength(100)]
         [Display(Name = "Apartment")]
         public string JointApplicantAppartment { get; set; }
 
+        [StringLength(100)]
         [Required(ErrorMessage = "*Required")]
         [Display(Name = "City")]
         public string JointApplicantCity { get; set; }
 
+        [StringLength(100)]
         [Required(ErrorMessage = "*Required")]
         [Display(Name = "Province")]
         public string JointApplicantProvince { get; set; }
 
         [Required(ErrorMessage = "*Required")]
         [RegularExpression(@"^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$", ErrorMessage = "*Wrong format")]
+
         [Display(Name = "Postal Code")]
         public string JointApplicantPostalCode { get; set; }
 
